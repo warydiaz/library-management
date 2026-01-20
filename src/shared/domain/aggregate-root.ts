@@ -1,6 +1,6 @@
 // src/shared/domain/aggregate-root.ts
 
-import { Entity } from './Entity';
+import { Entity } from './entity';
 import { DomainEvent } from './domain-event';
 
 export abstract class AggregateRoot<T> extends Entity<T> {
