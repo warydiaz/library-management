@@ -20,4 +20,8 @@ export abstract class AggregateRoot<T> extends Entity<T> {
   public clearDomainEvents(): void {
     this._domainEvents = [];
   }
+
+  public hasUncommittedEvents(): boolean {
+    return this._domainEvents.length > 0;
+  }
 }
