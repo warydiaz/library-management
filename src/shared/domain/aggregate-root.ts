@@ -8,7 +8,7 @@ export abstract class AggregateRoot<T> extends Entity<T> {
   private _domainEvents: DomainEvent[] = [];
   // 2. Getter para acceder a los eventos
   get domainEvents(): DomainEvent[] {
-    return this._domainEvents;
+    return [...this._domainEvents];
   }
 
   // 3. Método protegido para agregar eventos
